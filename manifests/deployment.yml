@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "myakscluster-742e"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "myakscluster-742e"
+    spec:
+      containers:
+        - name: "myakscluster-742e"
+          image: "testtesttestjay.azurecr.io/myakscluster"
+          ports:
+          - containerPort: 80
